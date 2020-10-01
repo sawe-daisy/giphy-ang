@@ -1,1 +1,15 @@
-<p>gifs works!</p>
+<div class="row">
+  <div class="col-md-4 mb-2 d-flex align-items-stretch" *ngFor='let gif of gifs'>
+    <div class="card">
+      <div>
+        <img src="{{gif.imgPath}}"
+        class="card-img-top"
+          alt="">
+      </div>
+      <div class="card-body">
+        <h4 class="card-title">{{ gif.username}}</h4>
+        <p class="card-text">{{ gif.title }}</p>
+      </div>
+    </div>
+  </div>
+</div>
