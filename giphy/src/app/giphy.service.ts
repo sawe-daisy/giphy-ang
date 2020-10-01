@@ -18,4 +18,6 @@ export class GiphyService {
     }
     return this.http.get<ApiResponse>(environment.TrendingUrl);
   }
-}
+
+
+  }

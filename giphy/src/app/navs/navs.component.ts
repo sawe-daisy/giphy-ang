@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./navs.component.css']
 })
 export class NavsComponent implements OnInit {
+  
 
   constructor() { }
 

@@ -4,8 +4,8 @@
 
 export const environment = {
   production: false,
-  TrendingUrl: 'https://api.giphy.com/v1/gifs/trending?api_key=iXnp72e4U2TNlfyWd2Wj9IHLxBiTKbMM&limit=25&rating=g',
-  SearchUrl: 'https://api.giphy.com/v1/gifs/search?api_key=iXnp72e4U2TNlfyWd2Wj9IHLxBiTKbMM&q=&limit=25&offset=0&rating=g&lang=en'
+  TrendingUrl: 'https://api.giphy.com/v1/gifs/trending?api_key=iXnp72e4U2TNlfyWd2Wj9IHLxBiTKbMM&limit=20&rating=g',
+  SearchUrl: 'https://api.giphy.com/v1/gifs/search?api_key=iXnp72e4U2TNlfyWd2Wj9IHLxBiTKbMM&q=&limit=20&offset=0&rating=g&lang=en'
 
 };
 
