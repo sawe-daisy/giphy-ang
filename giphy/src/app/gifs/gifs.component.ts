@@ -21,20 +21,33 @@ export class GifsComponent implements OnInit {
     this.http = http;
   }
 
-  performSearch(searchTerm): void {
-    const apilink = this.link + searchTerm.value;
-
-    this.http.get(apilink).subscribe((res: Response) => {
+  performSearch(searchTerm): any {
+    this.giphyService.searchGif(searchTerm.value).subscribe((res: Response) => {
+      this.gifs = [];
       for (let i = 0; i < res[ 'data' ].length; i++){
         let gifTitle = res['data'][i]['title'];
         let gifUname = res['data'][i]['username'];
         let gifImage = res['data'][i]['images']['original']['url'];
         let  giphy = new Giphy(gifTitle, gifUname, gifImage);
         this.gifs.push(giphy);
+
       }
-    });
+    })
+    // const apilink = this.link + searchTerm.value;
+
+    // this.http.get(apilink).subscribe((res: Response) => {
+    //   for (let i = 0; i < res[ 'data' ].length; i++){
+    //     let gifTitle = res['data'][i]['title'];
+    //     let gifUname = res['data'][i]['username'];
+    //     let gifImage = res['data'][i]['images']['original']['url'];
+    //     let  giphy = new Giphy(gifTitle, gifUname, gifImage);
+    //     this.gifs.push(giphy);
+
+    //   }
+    // });
 
   }
+
 
 
   ngOnInit(): void {
